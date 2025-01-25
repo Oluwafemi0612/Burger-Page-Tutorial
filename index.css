@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    overflow: hidden;
+    color: white;
+    animation: fadeIn 1s ease-in-out;
+    background-color: black;
+    background-attachment: fixed;
+}
+
+header {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    animation: fadeIn 1s ease-in-out;
+}
+.stars {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: #fff;
+    animation: twinkle 2s infinite;
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.5);
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    animation: slideInFromTop 1s ease-in-out;
+}
+
+.navbar img {
+    width: 50px;
+    animation: rotateIn 1s ease-in-out;
+}
+
+.navbar .center-nav a, .social a {
+    color: white;
+    margin-left: 15px;
+    font-size: 1.3rem;
+    transition: all 0.5s ease;
+    animation: fadeInUP 1s ease-in-out;
+}
+
+.navbar .center-nav a:first-child {
+    color: rgba(255, 140, 0);
+}
+
+.navbar .center-nav a:hover, .social a:hover {
+    color: rgba(255, 140, 0);
+    text-shadow: 0px 0px 30px rgba(255, 140, 0);
+}
+
+/* new stles for underline Effect */
+.navbar .center-nav a {
+    position: relative;
+    text-decoration: none;
+}
+
+.navbar .center-nav a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 140, 0);
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar .center-nav a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.text {
+    position: relative;
+    top: 10rem;
+    left: 11rem;
+    letter-spacing: 1px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.text h1 {
+    font-weight: bold;
+    font-size: 4rem;
+    font-family: sans-serif;
+    margin-bottom: 10px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.btn {
+    color: white;
+    border: 2px solid;
+    position: relative;
+    top: 3rem;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border-radius: 6px;
+    transition: all 0.5s ease;
+    margin-right: 10px;
+    animation: fadeInUp 1s ease-in-out backwards;
+}
